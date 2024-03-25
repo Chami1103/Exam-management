@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <servlet>
+        <servlet-name>fetch</servlet-name>
+        <servlet-class>com.quiz.ManageQuizServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>fetch</servlet-name>
+        <url-pattern>/fetchAll</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>add</servlet-name>
+        <servlet-class>com.quiz.CreateQuizServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>add</servlet-name>
+        <url-pattern>/insert</url-pattern> 
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>update</servlet-name>
+        <servlet-class>com.quiz.UpdateQuizServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>update</servlet-name>
+        <url-pattern>/editQuiz/:id</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>delete</servlet-name>
+        <servlet-class>com.quiz.UpdateQuizServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>delete</servlet-name>
+        <url-pattern>/deleteQuiz/:id</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>getQuiz</servlet-name>
+        <servlet-class>com.quiz.UpdateQuizServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getQuiz</servlet-name>
+        <url-pattern>/getQuiz/:id</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>
